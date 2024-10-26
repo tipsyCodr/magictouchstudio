@@ -1,0 +1,9 @@
+DB: u944597293_bioalexis
+User: u944597293_bioalexis
+Pass: DB@bioalexis@0987
+
+
+Backend Link: yourdomainname.com/admin
+Username : bioalexis_superadmin
+password: SAdmin@bioalexis@0987
+email: bioalexis@gmail.com
