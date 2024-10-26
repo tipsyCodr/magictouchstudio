@@ -11,12 +11,7 @@
 
 <!-- Favicon -->
 <link rel="icon" href="/img/favicon.png">
-<?php
-function base_url($path = '')
-{
-	return "http://magictouchphotography.test/" . ltrim($path, '/');
-}
-?>
+<?php require_once 'partials/php_functions.php'; ?>
 <!-- Google Fonts -->
 <link
 	href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
