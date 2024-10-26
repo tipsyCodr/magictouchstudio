@@ -12,8 +12,9 @@
 <!-- Favicon -->
 <link rel="icon" href="/img/favicon.png">
 <?php
-function base_url($path = '') {
-    return "http://magictouchphotography.test/" . ltrim($path, '/');
+function base_url($path = '')
+{
+	return "http://magictouchphotography.test/" . ltrim($path, '/');
 }
 ?>
 <!-- Google Fonts -->

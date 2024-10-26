@@ -2,8 +2,10 @@
 <cms:template title='Services' clonable='1' dynamic_folders='1' gallery='1'>
 
     <cms:repeatable name='images' label="Add Images" order='1'>
-        <cms:editable name="gg_image" label="Image" desc="Upload your image here" type="image" show_preview='1' preview_height='200' />
-        <cms:editable name="gg_thumb" assoc_field="gg_image" label="Image Thumbnail" desc="Thumbnail of image above" width='115' height='115' enforce_max='1' type="thumbnail" />
+        <cms:editable name="gg_image" label="Image" desc="Upload your image here" type="image" show_preview='1'
+            preview_height='200' />
+        <cms:editable name="gg_thumb" assoc_field="gg_image" label="Image Thumbnail" desc="Thumbnail of image above"
+            width='115' height='115' enforce_max='1' type="thumbnail" />
     </cms:repeatable>
 
     <cms:editable name="price" type="text" />
@@ -50,13 +52,14 @@
     .p-img img:hover {
         opacity: 0.5;
     }
-    .slicknav_menu .slicknav_nav a{
+
+    .slicknav_menu .slicknav_nav a {
         color: #fff !important;
     }
 </style>
 
 <body>
-<?php require_once 'partials/navbar.php'; ?>
+    <?php require_once 'partials/navbar.php'; ?>
 
 
 
@@ -65,9 +68,9 @@
         <div class="hero-slider">
             <cms:pages masterpage='slider.php'>
                 <cms:show_repeatable 'banner_images'>
-                <div class="single-slider">
-                    <img src="<cms:show image />" alt="">
-                </div>
+                    <div class="single-slider">
+                        <img src="<cms:show image />" alt="">
+                    </div>
                 </cms:show_repeatable>
             </cms:pages>
         </div>
@@ -77,12 +80,14 @@
     <!-- Joining Product Section -->
     <section style="padding-top:20px;">
         <div class="section ">
-            <div class="wrapper tw-flex tw-flex-col tw-items-center tw-justify-center" style="max-width: 1200px;">
+            <div class="container tw-flex tw-flex-col tw-items-center tw-justify-center" style="max-width: 1200px;">
                 <div class="head">
                     <h2 class="sub-heading tw-font-bold tw-text-3xl text-center tw-py-5">Our Services</h2>
                 </div>
-                <div class="tw-flex tw-py-10 tw-gap-10 flex-col tw-mx-auto tw-justify-center tw-items-center md:tw-flex-row">
-                    <div class="item tw-flex tw-flex-col tw-gap-20 sm:tw-flex-row tw-flex-wrap  tw-justify-center tw-items-center">
+                <div
+                    class="tw-flex tw-py-10 tw-gap-10 flex-col tw-mx-auto tw-justify-center tw-items-center md:tw-flex-row">
+                    <div
+                        class="item tw-flex tw-flex-col tw-gap-20 sm:tw-flex-row tw-flex-wrap  tw-justify-center tw-items-center">
                         <cms:pages masterpage='index.php'>
                             <div class="item tw-flex-col sm:tw-flex-row tw-gap-32 flex tw-items-center">
                                 <div class="description max-h-[300px]">
@@ -93,9 +98,11 @@
                                 </div>
                                 <div class="service-slider" style="width: 300px; height: 300px;">
                                     <cms:show_repeatable 'images'>
-                                    <div class="single-slider">
-                                        <img class=" tw-object-cover" style="width: 500px; height: 300px; object-fit: cover;" src="<cms:show gg_image />" alt="">
-                                    </div>
+                                        <div class="single-slider">
+                                            <img class=" tw-object-cover"
+                                                style="width: 500px; height: 300px; object-fit: cover;"
+                                                src="<cms:show gg_image />" alt="">
+                                        </div>
                                     </cms:show_repeatable>
                                 </div>
                             </div>
@@ -110,13 +117,15 @@
     <!-- Joining Product Section ends -->
 
     <!-- Featured Product Section -->
-    <section class="section" style="background-image:url('img/bg-featured.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
+    <section class="section"
+        style="background-image:url('img/bg-featured.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-items-center tw-justify-center tw-gap-10">
             <div class="head">
                 <h2 class="tw-font-bold tw-text-3xl text-center tw-py-5">Instagram Profile</h2>
             </div>
             <div>
-                <iframe src="https://www.instagram.com/magictouch.mtp/embed/?cr=1&v=12&w=320" width="520" height="620" frameborder="0" scrolling="yes" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/magictouch.mtp/embed/?cr=1&v=12&w=320" width="520" height="620"
+                    frameborder="0" scrolling="yes" allowtransparency="true"></iframe>
             </div>
         </div>
     </section>
@@ -159,7 +168,8 @@
                             </div>
                             <div class="col-lg-12 col-md-12 col-12">
                                 <div class="form-group">
-                                    <textarea name="message" placeholder="Write Your Message Here..." required></textarea>
+                                    <textarea name="message" placeholder="Write Your Message Here..."
+                                        required></textarea>
                                 </div>
                             </div>
                         </div>
