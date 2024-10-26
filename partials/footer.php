@@ -16,8 +16,7 @@
 				<!-- About Us Section -->
 				<div class="tw-w-full sm:tw-w-[270px] tw-flex-initial">
 					<div class="single-footer">
-						<img src="img/logo.png" alt="Bioalexis Trading India Private Limited"
-							class="">
+						<img src="img/logo.png" alt="Bioalexis Trading India Private Limited" class="">
 
 						<p class="tw-capitalize tw-text-justify tw-flex tw-flex-col tw-mt-6 tw-gap-y-2">Bioalexis
 							Trading India Private Limited
@@ -139,13 +138,14 @@
 	<div class="copyright  py-4">
 		<div class="tw-container tw-mx-auto">
 			<div class="tw-text-center">
-				<span class="tw-px-2">© Copyright 2024 | All Rights Reserved by <a
-						href="http://www.pathideamultiskill.com" target="_blank"
-						class="tw-text-white hover:tw-text-gray-400">Path Idea Multi Skill</a></span>
+				<span class="tw-px-2 flex flex-col sm:flex-row"><span class="block">© Copyright 2024 |</span> <span
+						class="block">
+						All Rights Reserved by <a href="http://www.pathideamultiskill.com" target="_blank"
+							class="tw-text-white hover:tw-text-gray-400">Path Idea Multi Skill
+					</span></a></span>
 			</div>
 		</div>
 	</div>
 	<!--/ End Copyright -->
 </footer>
 <!--/ End Footer Area -->
-
