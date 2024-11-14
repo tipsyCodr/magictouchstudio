@@ -56,6 +56,17 @@
     .slicknav_menu .slicknav_nav a {
         color: #fff !important;
     }
+
+    .single-video {
+        margin-top: -150px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .single-video {
+            margin-top: 10px;
+
+        }
+    }
 </style>
 
 <body>
@@ -66,18 +77,19 @@
     <!-- Slider Area -->
     <section class="slider">
         <div class="hero-video">
-            <div class="single-video" style="margin-top:-150px; position: relative;z-index: 0;">
+            <div class="single-video" style=" position: relative;z-index: 0;">
                 <video width="100%" height="100%" autoplay muted loop>
                     <source src="assets/videos/hero.mp4" type="video/mp4">
                 </video>
-                <div class="tw-flex tw-flex-col tw-text-white tw-justify-center tw-items-center tw-bg-black tw-bg-opacity-95"
+                <div class="tw-flex tw-flex-col tw-text-white tw-justify-center tw-items-center tw-bg-black tw-bg-opacity-80 md:tw-bg-opacity-95 "
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; backsgssround-color: rgba(0, 0, 0, 0.9);">
                     <!-- logo -->
-                    <img src="img/logo.png" class="tw-w-[200px]" alt="">
-                    <h1 class="tw-text-4xl tw-font-bold tw-py-2"
+                    <img src="img/logo.png" class=" tw-w-[100px] md:tw-w-[200px]" alt="">
+                    <h1 class="tw-text-xl md:tw-text-4xl tw-font-bold tw-py-2"
                         style="background: -webkit-linear-gradient(#ff69b4, #4169e1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                         Magic Touch Studio</h1>
-                    <h2 class=" tw-text-white tw-text-lg tw-font-normal">Where Every Shot Tells A Story</h2>
+                    <h2 class=" tw-text-white tw-text-sm md:tw-text-lg tw-font-normal">Wher e Every Shot Tells A Story
+                    </h2>
                 </div>
             </div>
         </div>
@@ -137,6 +149,41 @@
     </section>
     <!-- Joining Product Section ends -->
 
+    <!-- Photography showcase  -->
+    <section class="showcase">
+        <div class="container">
+            <div class="head">
+                <h2 class="text-center sub-heading tw-font-bold tw-text-3xl tw-py-5">Photography Showcase</h2>
+            </div>
+            <div class="photo-grid tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-5 tw-my-10">
+                <cms:pages masterpage='gallery.php'>
+                    <cms:show_repeatable 'gallery_images'>
+                        <div
+                            class="transition-all border-white shadow tw-m-2 tw-shadow tw-bg-white tw-rounded-lg group tw-border-8 hover:-tw-translate-y-6 hover:tw-rotate-2 ">
+                            <a class="tw-block " href="<cms:show image />" data-lightbox="gallery"
+                                onclick="event.preventDefault();">
+                                <img class="tw-w-full tw-object-cover" src="<cms:show image />"
+                                    alt="<cms:show caption />" />
+                                <div
+                                    class="tw-bg-black tw-opacity-50 tw-absolute tw-inset-0 tw-hidden group-hover:tw-flex group-focus:tw-flex tw-justify-center tw-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-6 tw-w-6 tw-text-white"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </cms:show_repeatable>
+                </cms:pages>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Photography showcase Ends  -->
+
     <!-- Featured Product Section -->
     <section class="section"
         style="background-image:url('img/bg-featured.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
@@ -151,31 +198,7 @@
         </div>
     </section>
     <!-- Featured Product Section ends -->
-    <!-- Photography showcase  -->
-    <section class="showcase">
-        <div class="container">
-            <div class="photo-grid tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-5 tw-my-10">
-                <cms:pages masterpage='index.php'>
-                    <cms:show_repeatable 'photos'>
-                        <div
-                            class="tw-m-2 tw-shadow tw-bg-white tw-rounded-lg hover:tw-scale-105 tw-transition-transform">
-                            <img class="tw-w-full tw-object-cover" src="<cms:show photo_url />"
-                                alt="<cms:show photo_caption />" />
-                            <div class="tw-p-2">
-                                <p class="tw-text-center tw-font-semibold">
-                                    <cms:show photo_caption />
-                                </p>
-                            </div>
-                        </div>
-                    </cms:show_repeatable>
-                </cms:pages>
-            </div>
 
-        </div>
-    </section>
-
-
-    <!-- Photography showcase Ends  -->
 
     <!-- Start Appointment -->
     <section class="appointment feedback">
