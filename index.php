@@ -65,6 +65,27 @@
 
     <!-- Slider Area -->
     <section class="slider">
+        <div class="hero-video">
+            <div class="single-video" style="margin-top:-150px; position: relative;z-index: 0;">
+                <video width="100%" height="100%" autoplay muted loop>
+                    <source src="assets/videos/hero.mp4" type="video/mp4">
+                </video>
+                <div class="tw-flex tw-flex-col tw-text-white tw-justify-center tw-items-center tw-bg-black tw-bg-opacity-95"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; backsgssround-color: rgba(0, 0, 0, 0.9);">
+                    <!-- logo -->
+                    <img src="img/logo.png" class="tw-w-[200px]" alt="">
+                    <h1 class="tw-text-4xl tw-font-bold tw-py-2"
+                        style="background: -webkit-linear-gradient(#ff69b4, #4169e1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Magic Touch Studio</h1>
+                    <h2 class=" tw-text-white tw-text-lg tw-font-normal">Where Every Shot Tells A Story</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--     
+    <section class="slider">
         <div class="hero-slider">
             <cms:pages masterpage='slider.php'>
                 <cms:show_repeatable 'banner_images'>
@@ -74,7 +95,7 @@
                 </cms:show_repeatable>
             </cms:pages>
         </div>
-    </section>
+    </section> -->
     <!--/ End Slider Area -->
 
     <!-- Joining Product Section -->
@@ -82,14 +103,14 @@
         <div class="section ">
             <div class="container tw-flex tw-flex-col tw-items-center tw-justify-center" style="max-width: 1200px;">
                 <div class="head">
-                    <h2 class="sub-heading tw-font-bold tw-text-3xl text-center tw-py-5">Our Services</h2>
+                    <h2 class="text-center sub-heading tw-font-bold tw-text-3xl tw-py-5">Our Services</h2>
                 </div>
                 <div
-                    class="tw-flex tw-py-10 tw-gap-10 flex-col tw-mx-auto tw-justify-center tw-items-center md:tw-flex-row">
+                    class="flex-col tw-flex tw-py-10 tw-gap-10 tw-mx-auto tw-justify-center tw-items-center md:tw-flex-row">
                     <div
-                        class="item tw-flex tw-flex-col tw-gap-20 sm:tw-flex-row tw-flex-wrap  tw-justify-center tw-items-center">
+                        class="item tw-flex tw-flex-col tw-gap-20 sm:tw-flex-row tw-flex-wrap tw-justify-center tw-items-center">
                         <cms:pages masterpage='index.php'>
-                            <div class="item tw-flex-col sm:tw-flex-row tw-gap-32 flex tw-items-center">
+                            <div class="flex item tw-flex-col sm:tw-flex-row tw-gap-32 tw-items-center">
                                 <div class="description max-h-[300px]">
                                     <h2 class="tw-text-white tw-font-bold tw-text-2xl">
                                         <cms:show k_page_title />
@@ -121,7 +142,7 @@
         style="background-image:url('img/bg-featured.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-items-center tw-justify-center tw-gap-10">
             <div class="head">
-                <h2 class="tw-font-bold tw-text-3xl text-center tw-py-5">Instagram Profile</h2>
+                <h2 class="text-center tw-font-bold tw-text-3xl tw-py-5">Instagram Profile</h2>
             </div>
             <div>
                 <iframe src="https://www.instagram.com/magictouch.mtp/embed/?cr=1&v=12&w=320" width="520" height="620"
@@ -130,6 +151,31 @@
         </div>
     </section>
     <!-- Featured Product Section ends -->
+    <!-- Photography showcase  -->
+    <section class="showcase">
+        <div class="container">
+            <div class="photo-grid tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-5 tw-my-10">
+                <cms:pages masterpage='index.php'>
+                    <cms:show_repeatable 'photos'>
+                        <div
+                            class="tw-m-2 tw-shadow tw-bg-white tw-rounded-lg hover:tw-scale-105 tw-transition-transform">
+                            <img class="tw-w-full tw-object-cover" src="<cms:show photo_url />"
+                                alt="<cms:show photo_caption />" />
+                            <div class="tw-p-2">
+                                <p class="tw-text-center tw-font-semibold">
+                                    <cms:show photo_caption />
+                                </p>
+                            </div>
+                        </div>
+                    </cms:show_repeatable>
+                </cms:pages>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Photography showcase Ends  -->
 
     <!-- Start Appointment -->
     <section class="appointment feedback">

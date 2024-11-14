@@ -108,8 +108,8 @@ $name = basename($url);
 ?>
 
 <!-- Header Area -->
-<nav class="header">
-    <!-- Header Inner -->
+<nav class="header " style="z-index: 12;">
+	<!-- Header Inner -->
 	<div class="header-inner">
 		<div class="container">
 			<div class="inner">
@@ -130,16 +130,16 @@ $name = basename($url);
 									<li class="<?php echo ($name == "index.php") ? "active" : ""; ?>">
 										<a href="/index.php"> HOME</a>
 									</li>
-<!--									<li class="dropdown ">-->
-<!--										<a href="#" class="dropdown-toggle">About</a>-->
-<!--										<ul class="dropdown-menu">-->
-<!--											<li><a href="/about.php">About</a></li>-->
-<!--											<li><a href="/achievers.php">Achievers</a></li>-->
-<!--											<li><a href="/awards.php">Awards</a></li>-->
-<!--											<li><a href="/director_msg.php">Director's Message</a></li>-->
-<!--											<li><a href="/testimonials.php">Testimonials</a></li>-->
-<!--										</ul>-->
-<!--									</li>-->
+									<!--									<li class="dropdown ">-->
+									<!--										<a href="#" class="dropdown-toggle">About</a>-->
+									<!--										<ul class="dropdown-menu">-->
+									<!--											<li><a href="/about.php">About</a></li>-->
+									<!--											<li><a href="/achievers.php">Achievers</a></li>-->
+									<!--											<li><a href="/awards.php">Awards</a></li>-->
+									<!--											<li><a href="/director_msg.php">Director's Message</a></li>-->
+									<!--											<li><a href="/testimonials.php">Testimonials</a></li>-->
+									<!--										</ul>-->
+									<!--									</li>-->
 
 									<li class=" <?php echo ($name == "about.php") ? "active" : ""; ?>">
 										<a class="tw-uppercase" href="/about.php"> ABOUT US </a>
@@ -155,20 +155,20 @@ $name = basename($url);
 									<li class="<?php echo ($name == 'contact.php') ? 'active' : ''; ?>">
 										<a href="/contact.php">CONTACT US</a>
 									</li>
-<!--									<li class="d-lg-none --><?php //echo ($name == 'login.php') ? 'active' : ''; ?><!--">-->
-<!--										<a href="http://login.bioalexis.com/">Login/Register</a>-->
-<!--									</li>-->
+									<!--									<li class="d-lg-none --><?php //echo ($name == 'login.php') ? 'active' : ''; ?><!--">-->
+									<!--										<a href="http://login.bioalexis.com/">Login/Register</a>-->
+									<!--									</li>-->
 								</ul>
 							</nav>
 						</div>
 					</div>
 
 					<!-- Login/Register Button -->
-<!--					<div class="col-lg-2 col-12">-->
-<!--						<div class="get-quote">-->
-<!--							<a href="http://login.bioalexis.com/" class="btn">Login/Register</a>-->
-<!--						</div>-->
-<!--					</div>-->
+					<!--					<div class="col-lg-2 col-12">-->
+					<!--						<div class="get-quote">-->
+					<!--							<a href="http://login.bioalexis.com/" class="btn">Login/Register</a>-->
+					<!--						</div>-->
+					<!--					</div>-->
 				</div>
 			</div>
 		</div>
