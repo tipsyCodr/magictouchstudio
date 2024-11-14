@@ -110,7 +110,7 @@
 						</ul>
 					</div>
 				</div>
-
+				Kenz Tower, 2nd Floor, Above Ten 11 Restaurant, Junwani Road, Kohka, Bhilai (C.G.)
 				<!-- Contact Section -->
 				<div class="tw-w-full sm:tw-w-[270px]">
 					<div class="single-footer f-link">

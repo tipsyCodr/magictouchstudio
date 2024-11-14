@@ -241,7 +241,11 @@
     </section>
     <!-- testimonials ends -->
 
-
+    <style>
+        .single-slider::before {
+            background-color: white;
+        }
+    </style>
     <!-- Our Clients Section -->
     <section class="section tw-bg-white tw-py-10">
         <div class="container">
