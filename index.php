@@ -196,7 +196,7 @@
 
     <!-- testimonials  -->
 
-    <section class="tw-bg-gray-300 tw-py-4">
+    <section class="tw-bg-gray-200 tw-py-4">
         <div class="container">
             <div class="head">
                 <h2 class="text-center sub-heading tw-font-bold tw-text-3xl tw-py-5 tw-text-black">Testimonials</h2>
@@ -207,8 +207,9 @@
 
                     <cms:pages masterpage='testimonials.php' folder="testimonials" paginate='1' limit='10'>
 
-                        <div class="tw-bg-gray-500 tw-p-5 tw-rounded-lg tw-max-w-[400px]">
-                            <div class="content">
+                        <div
+                            class="tw-bg-gray-300 tw-p-5 tw-rounded-lg tw-max-w-[400px] hover:-tw-translate-y-3 tw-transition-transform">
+                            <div class="content tw-text-white" style="color: white">
                                 <cms:show description />
                             </div>
                             <div class="tw-py-2 foot tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-2">
@@ -217,7 +218,7 @@
                                             style="width: 50px;" alt="">
                                     </div>
                                 </cms:show_repeatable>
-                                <p class="tw-font-bold">
+                                <p class="tw-font-bold tw-text-black">
                                     <cms:show k_page_title />
                                 </p>
                                 <div class="rating">
