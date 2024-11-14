@@ -253,19 +253,17 @@
                 <h2 class="text-center tw-font-bold tw-text-3xl tw-py-5">Brands We Have Worked With</h2>
             </div>
             <section class="slider">
-                <div class="hero-slider">
-
+                <div class="hero-slider" style="height: 100px;">
                     <?php
                     $files = glob("img/logos/*");
                     foreach ($files as $file) {
                         ?>
-                        <div class="single-slider">
-                            <img src="<?php echo $file; ?>" alt="">
+                        <div class="single-slider" style="height: 100px;">
+                            <img src="<?php echo $file; ?>" alt="" style="height: 100%; object-fit: contain;">
                         </div>
                         <?php
                     }
                     ?>
-
                 </div>
             </section>
         </div>
