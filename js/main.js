@@ -93,6 +93,17 @@ Version:	1.1
         '<i class="fa fa-angle-right" aria-hidden="true"></i>',
       ],
       dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        1170: {
+          items: 4,
+        },
+      },
     });
 
     $(".service-slider").owlCarousel({
