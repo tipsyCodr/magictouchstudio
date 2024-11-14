@@ -139,131 +139,133 @@
     <?php breadcrumbs('Testimonials', 'Testimonials') ?>
     <cms:if k_is_page>
 
-		<cms:embed 'testimonials.php' />
-		<cms:else />
-    <div class="section">
+        <cms:embed 'testimonials.php' />
+        <cms:else />
+        <div class="section">
 
-        <div class="">
             <div class="">
-                <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Testimonials</h2>
-                <div class="container">
+                <div class="">
+                    <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Testimonials</h2>
+                    <div class="container">
 
-                    <div class="scroll-container">
-                        <cms:pages masterpage='testimonials.php' folder="testimonials" paginate='1' limit='10'>
-                            <div class="card-sl">
-                                <div class="card-image">
+                        <div class="scroll-container">
+                            <cms:pages masterpage='testimonials.php' folder="testimonials" paginate='1' limit='10'>
+                                <div class="card-sl">
+                                    <div class="card-image">
                                         <cms:show_repeatable 'testimonials_images' start="1" limit="1">
                                             <img class="tw-object-cover" src="<cms:show image />"
                                                 style="width: 100%; height: 200px;">
                                         </cms:show_repeatable>
-                                       
+
+                                    </div>
+                                    <a class="card-action" href="<cms:show k_page_link />"><i
+                                            class="fa fa-chain"></i></a>
+                                    <div class="card-heading">
+                                        <a href="<cms:show k_page_link />" class="txt4">
+                                            <cms:show k_page_title />
+                                        </a>
+                                    </div>
+                                    <div class="card-text">
+                                        <cms:show description />
+
+                                    </div>
+                                    <div class="card-text">
+
+                                    </div>
+                                    <a href="<cms:show k_page_link />"
+                                        class="card-button tw-text-white visited:tw-text-white hover:tw-text-gray-100">
+                                        View</a>
                                 </div>
-                                <a class="card-action" href="<cms:show k_page_link />"><i class="fa fa-chain"></i></a>
+
+                            </cms:pages>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Product Testimonials</h2>
+            <div class="container">
+                <div class="scroll-container">
+                    <cms:pages masterpage='testimonials.php' folder="product_testimonials" paginate='1' limit='10'>
+                        <div class="card-sl">
+                            <div class="card-image">
+                                <cms:show_repeatable 'testimonials_images' start="1" limit="1">
+                                    <img class="tw-object-cover" src="<cms:show image />"
+                                        style="width: 100%; height: 200px;">
+                                </cms:show_repeatable>
+
+                            </div>
+
+                            <a class="card-action" href="<cms:show k_page_link />"><i class="fa fa-chain"></i></a>
+                            <div class="card-heading">
+                                <a href="<cms:show k_page_link />" class="txt4">
+                                    <cms:show title />
+                                </a>
+                            </div>
+                            <div class="card-text">
+                                <cms:show description />
+
+                            </div>
+                            <div class="card-text">
+
+                            </div>
+                            <a href="<cms:show k_page_link />"
+                                class="card-button tw-text-white visited:tw-text-white hover:tw-text-gray-100">
+                                View</a>
+                        </div>
+                    </cms:pages>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Videos Testimonials</h2>
+            <div class="container">
+                <div class="scroll-container">
+                    <cms:pages masterpage='testimonials.php' folder="videos_testimonials" paginate='1' limit='10'>
+                        <div class="card-sl">
+                            <div class="card-image">
+                                <cms:show_repeatable 'videos' start="1" limit="1">
+                                    <script>
+                                        url = '<cms:show video_link />';
+                                        // Assuming you have a function like this elsewhere in your JS to handle the URL conversion
+                                        convertToEmbedLink(url);
+                                    </script>
+                                </cms:show_repeatable>
+
+                            </div>
+
+                            <div class="card-content">
+                                <a class="card-action" href="<cms:show k_page_link />">
+                                    <i class="fa fa-chain"></i>
+                                </a>
+
                                 <div class="card-heading">
                                     <a href="<cms:show k_page_link />" class="txt4">
                                         <cms:show title />
                                     </a>
                                 </div>
+
                                 <div class="card-text">
                                     <cms:show description />
-
                                 </div>
-                                <div class="card-text">
 
-                                </div>
                                 <a href="<cms:show k_page_link />"
                                     class="card-button tw-text-white visited:tw-text-white hover:tw-text-gray-100">
-                                    View</a>
-                            </div>
-
-                        </cms:pages>
-
-                    </div>
-                </div>
-            </div>
+                                    View
+                                </a>
+                            </div> <!-- End of card-content -->
+                        </div> <!-- End of card-sl -->
+                    </cms:pages>
+                </div> <!-- End of scroll-container -->
+            </div> <!-- End of container -->
         </div>
-    </div>
-    </div>
-    <div>
-        <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Product Testimonials</h2>
-        <div class="container">
-        <div class="scroll-container">
-            <cms:pages masterpage='testimonials.php' folder="product_testimonials" paginate='1' limit='10'>
-                <div class="card-sl">
-                <div class="card-image">
-                                        <cms:show_repeatable 'testimonials_images' start="1" limit="1">
-                                            <img class="tw-object-cover" src="<cms:show image />"
-                                                style="width: 100%; height: 200px;">
-                                        </cms:show_repeatable>
-                                      
-                                </div>
 
-                    <a class="card-action" href="<cms:show k_page_link />"><i class="fa fa-chain"></i></a>
-                    <div class="card-heading">
-                        <a href="<cms:show k_page_link />" class="txt4">
-                            <cms:show title />
-                        </a>
-                    </div>
-                    <div class="card-text">
-                        <cms:show description />
 
-                    </div>
-                    <div class="card-text">
 
-                    </div>
-                    <a href="<cms:show k_page_link />"
-                        class="card-button tw-text-white visited:tw-text-white hover:tw-text-gray-100">
-                        View</a>
-                </div>
-            </cms:pages>
         </div>
-        </div>
-    </div>
-    <div>
-    <h2 class="tw-font-bold tw-text-2xl tw-my-6 tw-text-center">Videos Testimonials</h2>
-    <div class="container">
-        <div class="scroll-container">
-            <cms:pages masterpage='testimonials.php' folder="videos_testimonials" paginate='1' limit='10'>
-                <div class="card-sl">
-                    <div class="card-image">
-                        <cms:show_repeatable 'videos' start="1" limit="1">
-                            <script>
-                                 url = '<cms:show video_link />';
-                                // Assuming you have a function like this elsewhere in your JS to handle the URL conversion
-                                convertToEmbedLink(url);
-                            </script>
-                        </cms:show_repeatable>
-                        
-                    </div>
-
-                    <div class="card-content">
-                        <a class="card-action" href="<cms:show k_page_link />">
-                            <i class="fa fa-chain"></i>
-                        </a>
-
-                        <div class="card-heading">
-                            <a href="<cms:show k_page_link />" class="txt4">
-                                <cms:show title />
-                            </a>
-                        </div>
-
-                        <div class="card-text">
-                            <cms:show description />
-                        </div>
-
-                        <a href="<cms:show k_page_link />" class="card-button tw-text-white visited:tw-text-white hover:tw-text-gray-100">
-                            View
-                        </a>
-                    </div> <!-- End of card-content -->
-                </div> <!-- End of card-sl -->
-            </cms:pages>
-        </div> <!-- End of scroll-container -->
-    </div> <!-- End of container -->
-</div>
-
-
-
-    </div>
     </cms:if>
 
     <?php require_once 'partials/scripts.php' ?>

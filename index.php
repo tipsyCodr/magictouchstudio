@@ -148,7 +148,11 @@
         </div>
     </section>
     <!-- Joining Product Section ends -->
-
+    <style>
+        .pic-item:hover .icon {
+            display: flex;
+        }
+    </style>
     <!-- Photography showcase  -->
     <section class="showcase">
         <div class="container">
@@ -159,11 +163,17 @@
                 <cms:pages masterpage='gallery.php'>
                     <cms:show_repeatable 'gallery_images'>
                         <div
-                            class="transition-all border-white shadow tw-m-2 tw-shadow tw-bg-white tw-rounded-lg group tw-border-8 hover:-tw-translate-y-6 hover:tw-rotate-2 ">
-                            <a class="tw-block " href="<cms:show image />" data-lightbox="gallery"
+                            class="pic-item transition-all tw-relative border-white shadow tw-m-2 tw-h-[200px] tw-overflow-hidden">
+
+                            <a class="tw-block" href="<cms:show image />" data-lightbox="gallery"
                                 onclick="event.preventDefault();">
-                                <img class="tw-w-full tw-object-cover" src="<cms:show image />"
-                                    alt="<cms:show caption />" />
+                                <div
+                                    class="duration-500 tw-hidden icon tw-absolute tw-transition-all tw-items-center tw-justify-center tw-inset-0 tw-bg-black tw-bg-opacity-70 tw-w-full tw-h-full">
+
+                                    <i class="fa-solid fa-magnifying-glass-plus fa-2x"></i>
+                                </div>
+                                <img class="tw-w-full tw-h-full tw-object-cover tw-object-center"
+                                    src="<cms:show image />" alt="<cms:show caption />" />
                                 <div
                                     class="tw-bg-black tw-opacity-50 tw-absolute tw-inset-0 tw-hidden group-hover:tw-flex group-focus:tw-flex tw-justify-center tw-items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-6 tw-w-6 tw-text-white"
@@ -180,9 +190,85 @@
 
         </div>
     </section>
-
-
     <!-- Photography showcase Ends  -->
+
+
+
+    <!-- testimonials  -->
+
+    <section class="tw-bg-gray-300 tw-py-4">
+        <div class="container">
+            <div class="head">
+                <h2 class="text-center sub-heading tw-font-bold tw-text-3xl tw-py-5 tw-text-black">Testimonials</h2>
+            </div>
+            <div class="my-10 tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-10">
+                <div class="testimonials">
+
+
+                    <cms:pages masterpage='testimonials.php' folder="testimonials" paginate='1' limit='10'>
+
+                        <div class="tw-bg-gray-500 tw-p-5 tw-rounded-lg tw-max-w-[400px]">
+                            <div class="content">
+                                <cms:show description />
+                            </div>
+                            <div class="tw-py-2 foot tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-2">
+                                <cms:show_repeatable 'testimonials_images' start="1" limit="1">
+                                    <div class="tw-flex-shrink"><img class="tw-rounded-full" src="<cms:show image />"
+                                            style="width: 50px;" alt="">
+                                    </div>
+                                </cms:show_repeatable>
+                                <p class="tw-font-bold">
+                                    <cms:show k_page_title />
+                                </p>
+                                <div class="rating">
+                                    <span class="tw-flex tw-items-center">
+                                        <cms:show k_rating />
+                                        <i class="fa fa-star tw-text-yellow-400" aria-hidden="true"></i>
+                                        <i class="fa fa-star tw-text-yellow-400" aria-hidden="true"></i>
+                                        <i class="fa fa-star tw-text-yellow-400" aria-hidden="true"></i>
+                                        <i class="fa fa-star tw-text-yellow-400" aria-hidden="true"></i>
+                                        <i class="fa fa-star tw-text-yellow-400" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </cms:pages>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials ends -->
+
+
+    <!-- Our Clients Section -->
+    <section class="section tw-bg-white tw-py-10">
+        <div class="container">
+            <div class="head">
+                <h2 class="text-center tw-font-bold tw-text-3xl tw-py-5">Brands We Have Worked With</h2>
+            </div>
+            <section class="slider">
+                <div class="hero-slider">
+
+                    <?php
+                    $files = glob("img/logos/*");
+                    foreach ($files as $file) {
+                        ?>
+                        <div class="single-slider">
+                            <img src="<?php echo $file; ?>" alt="">
+                        </div>
+                        <?php
+                    }
+                    ?>
+
+                </div>
+            </section>
+        </div>
+
+
+
+    </section>
+
 
     <!-- Featured Product Section -->
     <section class="section"
