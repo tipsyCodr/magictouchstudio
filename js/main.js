@@ -86,7 +86,7 @@ Version:	1.1
       smartSpeed: 500,
       autoplayTimeout: 3500,
       autoplayHoverPause: true,
-      items: 6,
+      items: 4,
       nav: true,
       navText: [
         '<i class="fa fa-angle-left" aria-hidden="true"></i>',

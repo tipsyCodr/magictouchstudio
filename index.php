@@ -258,7 +258,7 @@
                     $files = glob("img/logos/*");
                     foreach ($files as $file) {
                         ?>
-                        <div class="single-slider" style="height: 100px;">
+                        <div class="single-slider" style="height: 100px; ">
                             <img src="<?php echo $file; ?>" alt="" style="height: 100%; object-fit: contain;">
                         </div>
                         <?php
