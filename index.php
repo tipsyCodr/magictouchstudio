@@ -201,7 +201,7 @@
             <div class="head">
                 <h2 class="text-center sub-heading tw-font-bold tw-text-3xl tw-py-5 tw-text-black">Testimonials</h2>
             </div>
-            <div class="my-10 tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-10">
+            <div class="my-10 tw-flex tw-flex-row tw-items-center tw-justify-center tw-gap-10">
                 <div class="testimonials">
 
 
