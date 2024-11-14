@@ -2,8 +2,8 @@
 
 // configuration
 $from = "feedback@" . $_SERVER['SERVER_NAME'];
-$to = "developerpathidea@gmail.com";
-// $to = "magictouch2219@gmail.com";
+// $to = "developerpathidea@gmail.com";
+$to = "magictouch2219@gmail.com";
 $subject = "Feedback from " . $_POST['name'] . ' on your website';
 
 // data
