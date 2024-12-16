@@ -281,7 +281,7 @@
                 <h2 class="text-center tw-font-bold tw-text-3xl tw-py-5">Instagram Profile</h2>
             </div>
             <div>
-                <iframe src="https://www.instagram.com/magictouch.mtp/embed/?cr=1&v=12&w=320" width="520" height="620"
+                <iframe src="https://www.instagram.com/magictouchstudiobhilai/embed/?cr=1&v=12&w=320" width="520" height="620"
                     frameborder="0" scrolling="yes" allowtransparency="true"></iframe>
             </div>
         </div>
