@@ -1523,6 +1523,10 @@ video {
   background-color: rgb(24 24 27 / 0.6);
 }
 
+.tw-bg-zinc-900\/70 {
+  background-color: rgb(24 24 27 / 0.7);
+}
+
 .tw-bg-zinc-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity));
@@ -2131,6 +2135,10 @@ video {
   opacity: 0.6;
 }
 
+.tw-opacity-90 {
+  opacity: 0.9;
+}
+
 .tw-shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2517,11 +2525,6 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.hover\:tw-grayscale-0:hover {
-  --tw-grayscale: grayscale(0);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .focus\:tw-border-pink-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(236 72 153 / var(--tw-border-opacity));
@@ -2607,6 +2610,11 @@ video {
   .sm\:tw-text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:tw-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

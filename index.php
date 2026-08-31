@@ -189,8 +189,8 @@
             </div>
             <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
                 <cms:pages masterpage='testimonials.php' folder="testimonials" paginate='1' limit='6'>
-                    <div class="tw-group tw-p-8 tw-rounded-2xl tw-bg-zinc-900/60 tw-border tw-border-white/10 tw-backdrop-blur-sm hover:tw-border-pink-500/40 hover:-tw-translate-y-2 tw-transition-all tw-duration-300 tw-flex tw-flex-col tw-justify-between">
-                        <div class="tw-text-gray-300 tw-text-sm tw-leading-relaxed tw-italic tw-mb-6">
+                    <div class="testimonial-card tw-group tw-p-8 tw-rounded-2xl tw-bg-zinc-900/70 tw-border tw-border-white/10 tw-backdrop-blur-sm hover:tw-border-pink-500/40 hover:-tw-translate-y-2 tw-transition-all tw-duration-300 tw-flex tw-flex-col tw-justify-between">
+                        <div class="tw-text-white tw-text-sm sm:tw-text-base tw-leading-relaxed tw-italic tw-mb-6">
                             "<cms:show description />"
                         </div>
                         <div class="tw-flex tw-items-center tw-gap-4 tw-pt-4 tw-border-t tw-border-white/10">
@@ -230,8 +230,8 @@
                     $files = glob("img/logos/*");
                     foreach ($files as $file) {
                         ?>
-                        <div class="tw-h-20 tw-px-4 tw-flex tw-items-center tw-justify-center tw-grayscale hover:tw-grayscale-0 tw-opacity-60 hover:tw-opacity-100 tw-transition-all">
-                            <img src="<?php echo $file; ?>" alt="" class="tw-max-h-16 tw-w-auto tw-object-contain">
+                        <div class="tw-h-20 tw-px-4 tw-flex tw-items-center tw-justify-center tw-opacity-90 hover:tw-opacity-100 tw-transition-all">
+                            <img src="<?php echo $file; ?>" alt="" class="tw-max-h-16 tw-w-auto tw-object-contain tw-rounded-lg">
                         </div>
                         <?php
                     }

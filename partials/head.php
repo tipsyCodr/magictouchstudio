@@ -138,6 +138,9 @@
 .lb-data .lb-number { color: #94a3b8 !important; font-size: 12px !important; }
 .lb-data .lb-close { filter: invert(1) !important; opacity: 0.8 !important; }
 .brands-slider .owl-nav { display: none !important; }
+.testimonial-card, .testimonial-card p, .testimonial-card span, .testimonial-card div {
+    color: #ffffff !important;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
 	integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
