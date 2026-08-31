@@ -49,6 +49,96 @@
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="<?= base_url('css/responsive.css') ?>">
 <link rel="stylesheet" href="/src/output.css">
+
+<style>
+/* Fix service card image slider visibility and overwrite template ::before overlay */
+.service-slider {
+    width: 100% !important;
+    height: 270px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+
+.service-slider .owl-stage-outer,
+.service-slider .owl-stage,
+.service-slider .owl-item,
+.service-slider .single-slider {
+    height: 100% !important;
+    position: relative !important;
+}
+
+.service-slider .single-slider::before {
+    display: none !important;
+    content: none !important;
+}
+
+.service-slider .single-slider img {
+    width: 100% !important;
+    height: 270px !important;
+    object-fit: cover !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.service-slider .owl-nav {
+    position: absolute !important;
+    bottom: 12px !important;
+    right: 12px !important;
+    display: flex !important;
+    gap: 6px !important;
+    z-index: 30 !important;
+    margin: 0 !important;
+    top: auto !important;
+    width: auto !important;
+}
+
+.service-slider .owl-nav div {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    text-align: center !important;
+    border-radius: 9999px !important;
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(4px) !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    position: static !important;
+}
+
+.service-slider .owl-nav div:hover {
+    background: #ec4899 !important;
+    border-color: #ec4899 !important;
+}
+
+/* Lightbox2 Modern Styling */
+.lb-outerContainer {
+    border-radius: 16px !important;
+    background-color: #121214 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+.lb-container { padding: 8px !important; }
+.lb-image { border-radius: 12px !important; border: none !important; }
+.lightboxOverlay {
+    background-color: rgba(0, 0, 0, 0.88) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+.lb-dataContainer { padding-top: 12px !important; }
+.lb-data .lb-details {
+    color: #cbd5e1 !important;
+    font-family: inherit !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+.lb-data .lb-number { color: #94a3b8 !important; font-size: 12px !important; }
+.lb-data .lb-close { filter: invert(1) !important; opacity: 0.8 !important; }
+.brands-slider .owl-nav { display: none !important; }
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
 	integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />

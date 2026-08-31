@@ -108,72 +108,31 @@ $name = basename($url);
 ?>
 
 <!-- Header Area -->
-<nav class="header " style="z-index: 12;">
-	<!-- Header Inner -->
-	<div class="header-inner">
-		<div class="container">
-			<div class="inner">
-				<div class="row">
-					<!-- Logo Section -->
-					<div class="col-lg-3 col-md-3 col-12">
-						<div class="logo">
-							<a href="/index.php"><img src="/img/logo.png" alt="Bioalexis Trading Pvt. Ltd."
-									style="width:125px"></a>
-						</div>
-						<div class="mobile-nav"></div>
-					</div>
-					<!-- Main Menu Section -->
-					<div class="col-lg-7 col-md-9 col-12">
-						<div class="main-menu">
-							<nav class="navigation">
-								<ul class="nav menu ">
-									<li class="<?php echo ($name == "index.php") ? "active" : ""; ?>">
-										<a href="/index.php"> HOME</a>
-									</li>
-									<!--									<li class="dropdown ">-->
-									<!--										<a href="#" class="dropdown-toggle">About</a>-->
-									<!--										<ul class="dropdown-menu">-->
-									<!--											<li><a href="/about.php">About</a></li>-->
-									<!--											<li><a href="/achievers.php">Achievers</a></li>-->
-									<!--											<li><a href="/awards.php">Awards</a></li>-->
-									<!--											<li><a href="/director_msg.php">Director's Message</a></li>-->
-									<!--											<li><a href="/testimonials.php">Testimonials</a></li>-->
-									<!--										</ul>-->
-									<!--									</li>-->
-
-									<li class=" <?php echo ($name == "about.php") ? "active" : ""; ?>">
-										<a class="tw-uppercase" href="/about.php"> ABOUT US </a>
-									</li>
-
-									<li class="<?php echo ($name == "products.php") ? 'active' : ''; ?>">
-										<a href="/services.php">SERVICES</a>
-									</li>
-									<li class="<?php echo ($name == "gallery.php") ? 'active' : ''; ?>">
-										<a href="/gallery.php">GALLERY</a>
-									</li>
-
-									<li class="<?php echo ($name == 'contact.php') ? 'active' : ''; ?>">
-										<a href="/contact.php">CONTACT US</a>
-									</li>
-									<!--									<li class="d-lg-none --><?php //echo ($name == 'login.php') ? 'active' : ''; ?><!--">-->
-									<!--										<a href="http://login.bioalexis.com/">Login/Register</a>-->
-									<!--									</li>-->
-								</ul>
-							</nav>
-						</div>
-					</div>
-
-					<!-- Login/Register Button -->
-					<!--					<div class="col-lg-2 col-12">-->
-					<!--						<div class="get-quote">-->
-					<!--							<a href="http://login.bioalexis.com/" class="btn">Login/Register</a>-->
-					<!--						</div>-->
-					<!--					</div>-->
-				</div>
+<header class="tw-fixed tw-top-0 tw-left-0 tw-w-full tw-z-50 tw-bg-black/60 tw-backdrop-blur-md tw-border-b tw-border-white/10 tw-transition-all tw-duration-300">
+	<div class="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+		<div class="tw-flex tw-items-center tw-justify-between tw-h-20">
+			<!-- Logo -->
+			<div class="tw-flex-shrink-0">
+				<a href="/index.php" class="tw-flex tw-items-center">
+					<img src="/img/logo.png" alt="Magic Touch Studio" class="tw-h-12 tw-w-auto tw-object-contain">
+				</a>
 			</div>
+			<!-- Desktop Menu -->
+			<nav class="tw-hidden md:tw-flex tw-items-center tw-space-x-8">
+				<a href="/index.php" class="tw-text-sm tw-font-semibold tw-tracking-wider tw-transition-colors <?php echo ($name == 'index.php' || $name == '') ? 'tw-text-pink-500' : 'tw-text-gray-200 hover:tw-text-white'; ?>">HOME</a>
+				<a href="/about.php" class="tw-text-sm tw-font-semibold tw-tracking-wider tw-transition-colors <?php echo ($name == 'about.php') ? 'tw-text-pink-500' : 'tw-text-gray-200 hover:tw-text-white'; ?>">ABOUT US</a>
+				<a href="/services.php" class="tw-text-sm tw-font-semibold tw-tracking-wider tw-transition-colors <?php echo ($name == 'services.php') ? 'tw-text-pink-500' : 'tw-text-gray-200 hover:tw-text-white'; ?>">SERVICES</a>
+				<a href="/gallery.php" class="tw-text-sm tw-font-semibold tw-tracking-wider tw-transition-colors <?php echo ($name == 'gallery.php') ? 'tw-text-pink-500' : 'tw-text-gray-200 hover:tw-text-white'; ?>">GALLERY</a>
+				<a href="/contact.php" class="tw-text-sm tw-font-semibold tw-tracking-wider tw-transition-colors <?php echo ($name == 'contact.php') ? 'tw-text-pink-500' : 'tw-text-gray-200 hover:tw-text-white'; ?>">CONTACT US</a>
+			</nav>
+			<!-- Book / CTA Button -->
+			<div class="tw-hidden md:tw-flex tw-items-center">
+				<a href="/contact.php" class="tw-inline-flex tw-items-center tw-justify-center tw-px-5 tw-py-2.5 tw-text-xs tw-font-semibold tw-tracking-widest tw-uppercase tw-text-white tw-bg-gradient-to-r tw-from-pink-500 tw-to-purple-600 tw-rounded-full hover:tw-opacity-90 tw-transition-all tw-shadow-lg tw-shadow-pink-500/20">Book Session</a>
+			</div>
+			<!-- Mobile hamburger placeholder -->
+			<div class="md:tw-hidden mobile-nav"></div>
 		</div>
 	</div>
-</nav>
-<!-- End Header Area -->
+</header>
 
 <?php require_once 'breadcrumbs.php'; ?>

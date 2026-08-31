@@ -23,117 +23,63 @@
   }
 </style>
 
-<body>
+<body class="tw-bg-black tw-text-white">
   <?php require_once 'partials/navbar.php' ?>
+  <?php breadcrumbs('About Us', 'About') ?>
 
-  <?php breadcrumbs('About Us', 'About Us') ?>
-  <!-- Start Contact Us -->
-
-  <div onclick="document.querySelector('.popup_backdrop').style.display='none'"
-    class="popup_backdrop tw-z-[1000] tw-flex tw-justify-center tw-items-center tw-bg-black tw-fixed  tw-w-full tw-h-full tw-bg-opacity-50 tw-backdrop-blur-md "
-    style="top:0; display: none">
-    <div class="popup tw-p-2  tw-bg-white tw-w-fit tw-h-fit">
-      <div class="head flex flex-row tw-justify-between tw-items-center gap-5">
-        <h2 class="tw-font-bold tw-text-black">News</h2>
-        <button class="close" onclick="document.querySelector('.popup_backdrop').style.display='none'">&times;</button>
-      </div>
-      <cms:pages masterpage='popup.php'>
-        <div class="notice">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/GSTHsbgbEaU?si=94zXL-f5J7cuf3On"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <section class="tw-py-20 tw-bg-gradient-to-b tw-from-black tw-via-zinc-950 tw-to-black">
+    <div class="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-16 tw-items-center tw-mb-24">
+        <div>
+          <span class="tw-text-pink-500 tw-text-sm tw-font-semibold tw-tracking-widest tw-uppercase">Our Story</span>
+          <h2 class="tw-text-3xl md:tw-text-5xl tw-font-bold tw-mt-2 tw-mb-6 tw-bg-clip-text tw-text-transparent tw-bg-gradient-to-r tw-from-white tw-to-gray-400">
+            Welcome to Magic Touch Photo Studio
+          </h2>
+          <div class="tw-space-y-4 tw-text-gray-300 tw-leading-relaxed tw-text-base">
+            <p>
+              At Magic Touch Photo Studio, we take every assignment seriously and work with immense passion to deliver breathtaking, creative results. We specialize in baby shoots, maternity shoots, portrait photography, candid moments, pre-weddings, weddings, and fashion modelling portfolios.
+            </p>
+            <p>
+              With over a decade of hands-on experience in high-end photography, cinematography, and creative direction, our dedicated crew of 20 professionally trained visual artists brings any vision to life.
+            </p>
+            <p class="tw-text-pink-400 tw-font-medium">
+              "We believe photography is a way of feeling, touching, and loving. What has been caught on camera stays forever."
+            </p>
+          </div>
         </div>
-      </cms:pages>
-    </div>
-
-  </div>
-  <section class="contact-us section">
-    <div class="container">
-      <!-- Start Feautes -->
-      <section class=" section" style="padding:0; padding-top: 20px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title tw-text-center">
-                <h1 class="sub-heading  tw-font-bold tw-text-2xl ">Welcome to Magic Touch Photo Studio</h1>
-                  <div class="tw-flex tw-flex-col sm:tw-flex-row tw-gap-10 tw-items-center tw-justify-center">
-                  <div class="tw-max-w-[500px]">
-                      <p class="sub-text tw-text-white  tw-text-xl" style="text-align: justify">At Magic touch photo Studio, we take up every assignment seriously
-                          and work in delivering creative results. We specialize in Baby shoot,
-                          Maternity shoot, portrait photography. candids, Pre Wedding,
-                          Wedding, modelling portfolio and the list goes on endlessly. We make
-                          your special events even more special with our creative and amazing
-                          photography that speaks!
-                      </p>
-                      <p class="sub-text tw-text-white tw-text-xl" style="text-align: justify">We have a decade long experience in photography, cinematography,
-                          , movie making assistance such as direction, special effects etc. It all
-                          depends on what our customers want and we will be on our toe to do it!
-                          We are a team of 20 professionally trained individuals to cater to various
-                          needs of our customer. Please Do Check our Social Media Handles for
-                          Latest Updates!
-                      </p>
-                      <p class="sub-text tw-text-white tw-text-xl" style="text-align: justify">We believe photography and videography is a way of feeling,
-                          touching and loving people! What has been photographer or
-                          videographer stays forever .As life moves on and things get prioritized,
-                          the photographs/ videographs are the proof that speaks whenever we
-                          want to cherish the special moments! That's why we proudly say we
-                          transform moments to memories.
-                      </p>
-                  </div>
-                    <div class=" ">
-                        <img src="img/logo.png"  alt="">
-                    </div>
-                    </div>
-
-              </div>
-            </div>
+        <div class="tw-flex tw-justify-center">
+          <div class="tw-relative tw-w-72 tw-h-72 md:tw-w-96 md:tw-h-96 tw-rounded-3xl tw-bg-gradient-to-tr tw-from-pink-500/20 tw-via-purple-500/10 tw-to-transparent tw-p-8 tw-border tw-border-white/10 tw-flex tw-items-center tw-justify-center tw-backdrop-blur-md">
+            <img src="img/logo.png" alt="Magic Touch Studio" class="tw-max-w-full tw-max-h-full tw-object-contain">
           </div>
+        </div>
+      </div>
 
-
-      </section>
-      <!-- End Blog Area -->
-
-
-
-
-      <div class="contact-info ">
-        <div class="row">
-          <!-- single-info -->
-          <div class="col-lg-4 col-12">
-            <div class="single-info">
-              <i class="icofont icofont-ui-call icofont-1x"></i>
-              <div class="content">
-                <h3 style="padding:0px">+91 - 6260116170</h3>
-
-
-                <p style="padding:0px"><i class="icofont-envelope icofont-1x"></i> magictouch2219@gmail.com </p>
-              </div>
-            </div>
+      <!-- Info Cards -->
+      <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8">
+        <div class="tw-p-8 tw-rounded-2xl tw-bg-zinc-900/60 tw-border tw-border-white/10 tw-backdrop-blur-sm hover:tw-border-pink-500/40 tw-transition-all">
+          <div class="tw-w-12 tw-h-12 tw-rounded-xl tw-bg-pink-500/20 tw-text-pink-400 tw-flex tw-items-center tw-justify-center tw-mb-6 tw-text-xl">
+            <i class="fa-solid fa-phone"></i>
           </div>
-          <!--/End single-info -->
-          <!-- single-info -->
-          <div class="col-lg-4 col-12">
-            <div class="single-info">
-              <i class="icofont-google-map"></i>
-              <div class="content">
-                <h3>  Bhilai </h3>
-                <p style="padding:0;"> Kenz Tower, 2nd Floor, Above Ten 11 Restaurant, Junwani Road, Kohka, Bhilai (C.G.)</p>
-              </div>
-            </div>
+          <h3 class="tw-text-lg tw-font-bold tw-text-white tw-mb-2">Phone & Email</h3>
+          <p class="tw-text-gray-400 tw-text-sm">+91 6260116170</p>
+          <p class="tw-text-gray-400 tw-text-sm">magictouch2219@gmail.com</p>
+        </div>
+
+        <div class="tw-p-8 tw-rounded-2xl tw-bg-zinc-900/60 tw-border tw-border-white/10 tw-backdrop-blur-sm hover:tw-border-pink-500/40 tw-transition-all">
+          <div class="tw-w-12 tw-h-12 tw-rounded-xl tw-bg-purple-500/20 tw-text-purple-400 tw-flex tw-items-center tw-justify-center tw-mb-6 tw-text-xl">
+            <i class="fa-solid fa-location-dot"></i>
           </div>
-          <!--/End single-info -->
-          <!-- single-info -->
-          <div class="col-lg-4 col-12">
-            <div class="single-info">
-              <i class="icofont icofont-wall-clock"></i>
-              <div class="content">
-                <h3 style="padding:0px">Mon - Sat: 8am - 5pm</h3>
-                <p style="padding:0px">Sunday Closed</p>
-              </div>
-            </div>
+          <h3 class="tw-text-lg tw-font-bold tw-text-white tw-mb-2">Studio Location</h3>
+          <p class="tw-text-gray-400 tw-text-sm">Kenz Tower, 2nd Floor, Above Ten 11 Restaurant, Junwani Road, Kohka, Bhilai (C.G.)</p>
+        </div>
+
+        <div class="tw-p-8 tw-rounded-2xl tw-bg-zinc-900/60 tw-border tw-border-white/10 tw-backdrop-blur-sm hover:tw-border-pink-500/40 tw-transition-all">
+          <div class="tw-w-12 tw-h-12 tw-rounded-xl tw-bg-indigo-500/20 tw-text-indigo-400 tw-flex tw-items-center tw-justify-center tw-mb-6 tw-text-xl">
+            <i class="fa-solid fa-clock"></i>
           </div>
-          <!--/End single-info -->
+          <h3 class="tw-text-lg tw-font-bold tw-text-white tw-mb-2">Working Hours</h3>
+          <p class="tw-text-gray-400 tw-text-sm">Mon - Sat: 8:00 AM - 8:00 PM</p>
+          <p class="tw-text-pink-400 tw-text-sm">Sunday: By Appointment</p>
         </div>
       </div>
     </div>

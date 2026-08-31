@@ -5,69 +5,56 @@
 
 </head>
 <style>
-    .section h2,
-    .section h3 {
-        color: #0a3b3f !important;
-    }
-
-    .Feautess p {
-        color: #000 !important;
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    hr {
-        border: unset;
+    .service-card {
+        transition: all 0.3s ease;
     }
 </style>
 
-<body>
-<?php require_once 'partials/navbar.php' ?>
+<body class="tw-bg-black tw-text-white">
+    <?php require_once 'partials/navbar.php' ?>
+    <?php breadcrumbs('Our Services', 'Services') ?>
 
-<?php breadcrumbs('Our Services', 'Our Services') ?>
-<!-- Start Contact Us -->
+    <section class="tw-py-20 tw-bg-gradient-to-b tw-from-black tw-via-zinc-950 tw-to-black">
+        <div class="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+            <div class="tw-text-center tw-mb-16">
+                <span class="tw-text-pink-500 tw-text-sm tw-font-semibold tw-tracking-widest tw-uppercase">Photography & Videography</span>
+                <h2 class="tw-text-3xl md:tw-text-5xl tw-font-bold tw-mt-2 tw-bg-clip-text tw-text-transparent tw-bg-gradient-to-r tw-from-white tw-to-gray-400">What We Specialize In</h2>
+                <div class="tw-w-20 tw-h-1 tw-bg-gradient-to-r tw-from-pink-500 tw-to-purple-600 tw-mx-auto tw-mt-4 tw-rounded-full"></div>
+            </div>
 
-<section class=" ">
-
-
-    <!-- Joining Product Section -->
-    <section style="padding-top:20px;">
-        <div class=" ">
-            <div class="wrapper tw-flex tw-flex-col tw-items-center tw-justify-center" style="max-width: 1200px;">
-                <div class="head">
-                    <h2 class="sub-heading tw-font-bold tw-text-3xl text-center tw-py-5">Our Services</h2>
-                </div>
-                <div class="tw-flex tw-py-10 tw-gap-10 flex-col tw-mx-auto tw-justify-center tw-items-center md:tw-flex-row">
-                    <div class="item tw-flex tw-flex-col tw-gap-20 sm:tw-flex-row tw-flex-wrap  tw-justify-center tw-items-center">
-                        <cms:pages masterpage='index.php'>
-                            <div class="item tw-flex-col sm:tw-flex-row tw-gap-32 flex tw-items-center">
-                                <div class="description max-h-[300px]">
-                                    <h2 class="tw-text-white tw-font-bold tw-text-2xl">
-                                        <cms:show k_page_title />
-                                    </h2>
+            <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
+                <cms:pages masterpage='index.php'>
+                    <div class="service-card tw-group tw-bg-zinc-900/60 tw-border tw-border-white/10 tw-rounded-3xl tw-overflow-hidden tw-backdrop-blur-md hover:tw-border-pink-500/50 hover:-tw-translate-y-2 hover:tw-shadow-2xl hover:tw-shadow-pink-500/10 tw-flex tw-flex-col">
+                        <div class="tw-w-full tw-relative">
+                            <div class="owl-carousel service-slider">
+                                <cms:show_repeatable 'images'>
+                                    <div class="single-slider">
+                                        <img src="<cms:show gg_image />" alt="<cms:show k_page_title />">
+                                    </div>
+                                </cms:show_repeatable>
+                            </div>
+                            <div class="tw-absolute tw-inset-x-0 tw-bottom-0 tw-h-12 tw-bg-gradient-to-t tw-from-zinc-950 tw-to-transparent tw-pointer-events-none tw-z-10"></div>
+                        </div>
+                        <div class="tw-p-8 tw-flex tw-flex-col tw-flex-1 tw-justify-between tw-gap-4">
+                            <div>
+                                <h3 class="tw-text-2xl tw-font-bold tw-text-white group-hover:tw-text-pink-400 tw-transition-colors">
+                                    <cms:show k_page_title />
+                                </h3>
+                                <div class="tw-text-gray-400 tw-text-sm tw-leading-relaxed tw-mt-2">
                                     <cms:show description />
                                 </div>
-                                <div class="service-slider" style="width: 300px; height: 300px;">
-                                    <cms:show_repeatable 'images'>
-                                    <div class="single-slider">
-                                        <img class=" tw-object-cover" style="width: 500px; height: 300px; object-fit: cover;" src="<cms:show gg_image />" alt="">
-                                    </div>
-                                    </cms:show_repeatable>
-                                </div>
                             </div>
-                        </cms:pages>
-
-
+                            <div class="tw-pt-4 tw-border-t tw-border-white/5 tw-flex tw-items-center tw-justify-between">
+                                <a href="/contact.php" class="tw-inline-flex tw-items-center tw-gap-2 tw-text-xs tw-font-semibold tw-tracking-widest tw-uppercase tw-text-pink-400 hover:tw-text-pink-300">
+                                    Book This Service <i class="fa fa-arrow-right tw-text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </cms:pages>
             </div>
         </div>
     </section>
-    <!-- Joining Product Section ends -->
-
-</section>
 
 
 <!--/ End Contact Us -->

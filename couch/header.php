@@ -35,12 +35,7 @@
     CCCL.
     */
 
-    if( defined('E_STRICT') ){
-        error_reporting(E_ALL & ~(E_NOTICE | E_STRICT | E_WARNING | E_DEPRECATED)); // Report all errors except notices and strict standard warnings
-    }
-    else{
-        error_reporting(E_ALL & ~E_NOTICE); // Report all errors except notices
-    }
+    @error_reporting(E_ALL & ~(E_NOTICE | E_WARNING | 2048 | 8192));
     // Since PHP 5.1.0 every call to a date/time function generates a E_NOTICE if the timezone isn't valid,
     if( !ini_get('date.timezone') || !date_default_timezone_set(ini_get('date.timezone')) ){
         date_default_timezone_set( "America/New_York" );
