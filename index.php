@@ -251,13 +251,73 @@
                     <p class="tw-mt-4 tw-text-gray-400 tw-text-base tw-leading-relaxed tw-max-w-lg">
                         Stay connected with our latest shoots, behind-the-scenes moments, and exclusive creative projects.
                     </p>
-                    <a href="https://www.instagram.com/magictouchstudiobhilai/" target="_blank" class="tw-inline-flex tw-items-center tw-gap-3 tw-mt-8 tw-px-6 tw-py-3 tw-rounded-full tw-bg-gradient-to-r tw-from-pink-500 tw-to-purple-600 tw-text-white tw-font-semibold hover:tw-opacity-90 tw-transition-all tw-shadow-lg tw-shadow-pink-500/25">
-                        <i class="fa-brands fa-instagram tw-text-lg"></i> Follow @magictouchstudiobhilai
+                    <a href="https://www.instagram.com/magic_touch_studio_bhilai/" target="_blank" class="tw-inline-flex tw-items-center tw-gap-3 tw-mt-8 tw-px-6 tw-py-3 tw-rounded-full tw-bg-gradient-to-r tw-from-pink-500 tw-to-purple-600 tw-text-white tw-font-semibold hover:tw-opacity-90 tw-transition-all tw-shadow-lg tw-shadow-pink-500/25">
+                        <i class="fa-brands fa-instagram tw-text-lg"></i> Follow @magic_touch_studio_bhilai
                     </a>
                 </div>
-                <div class="tw-flex-shrink-0 tw-rounded-2xl tw-overflow-hidden tw-border tw-border-white/10 tw-shadow-2xl tw-shadow-pink-500/10">
-                    <iframe src="https://www.instagram.com/magictouchstudiobhilai/embed/?cr=1&v=12&w=320" width="360" height="500"
-                        frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <!-- Instagram Profile Card Replica -->
+                <div class="tw-w-full sm:tw-w-[360px] tw-bg-zinc-950 tw-border tw-border-zinc-800 tw-rounded-3xl tw-p-5 tw-shadow-2xl tw-shadow-pink-500/10 tw-text-white tw-font-sans">
+                    <!-- Top Bar -->
+                    <div class="tw-flex tw-items-center tw-justify-between tw-pb-4 tw-border-b tw-border-zinc-800/80">
+                        <i class="fa fa-angle-left tw-text-lg tw-text-gray-400"></i>
+                        <span class="tw-font-semibold tw-text-sm tw-tracking-wide">magic_touch_studio_bhilai</span>
+                        <i class="fa fa-ellipsis tw-text-gray-400"></i>
+                    </div>
+
+                    <!-- Profile Info -->
+                    <div class="tw-flex tw-items-center tw-justify-between tw-pt-4 tw-pb-3">
+                        <div class="tw-relative tw-p-[2px] tw-rounded-full tw-bg-gradient-to-tr tw-from-amber-500 tw-via-pink-500 tw-to-purple-600">
+                            <img src="img/logo.png" class="tw-w-16 tw-h-16 tw-rounded-full tw-object-cover tw-bg-black tw-p-1" alt="Magic Touch Studio">
+                        </div>
+                        <div class="tw-flex tw-gap-5 tw-text-center">
+                            <div>
+                                <p class="tw-font-bold tw-text-base">4</p>
+                                <p class="tw-text-xs tw-text-gray-400">posts</p>
+                            </div>
+                            <div>
+                                <p class="tw-font-bold tw-text-base">2</p>
+                                <p class="tw-text-xs tw-text-gray-400">followers</p>
+                            </div>
+                            <div>
+                                <p class="tw-font-bold tw-text-base">10</p>
+                                <p class="tw-text-xs tw-text-gray-400">following</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bio -->
+                    <div class="tw-text-xs tw-space-y-0.5 tw-pb-4">
+                        <p class="tw-font-bold tw-text-white">_magic_touch_photo_studio_ Bhilai</p>
+                        <p class="tw-text-gray-300">WE ARE PROVIDING SERVICES</p>
+                        <p class="tw-text-gray-400">• MULTICOLOUR PRINTING</p>
+                        <p class="tw-text-gray-400">• WEDDING</p>
+                        <p class="tw-text-gray-400">• ALL EVENT PHOTOGRAPHY</p>
+                    </div>
+
+                    <!-- Follow Button -->
+                    <a href="https://www.instagram.com/magic_touch_studio_bhilai/" target="_blank"
+                        class="tw-block tw-w-full tw-py-2 tw-text-center tw-font-semibold tw-text-xs tw-text-white tw-bg-[#0095f6] hover:tw-bg-[#1877f2] tw-rounded-lg tw-transition-colors">
+                        Follow on Instagram
+                    </a>
+
+                    <!-- Tabs -->
+                    <div class="tw-flex tw-justify-around tw-pt-4 tw-pb-2 tw-text-gray-400 tw-text-sm">
+                        <i class="fa fa-table-cells tw-text-white tw-border-b-2 tw-border-white tw-pb-1"></i>
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa fa-id-badge"></i>
+                    </div>
+
+                    <!-- Posts Grid -->
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-1 tw-pt-1">
+                        <cms:pages masterpage='gallery.php'>
+                            <cms:show_repeatable 'gallery_images' limit='3'>
+                                <a href="https://www.instagram.com/magic_touch_studio_bhilai/" target="_blank" class="tw-relative tw-aspect-square tw-overflow-hidden tw-rounded-sm tw-group">
+                                    <img src="<cms:show image />" class="tw-w-full tw-h-full tw-object-cover group-hover:tw-scale-110 tw-transition-transform" alt="">
+                                    <i class="fa-solid fa-play tw-absolute tw-top-1.5 tw-right-1.5 tw-text-[10px] tw-text-white drop-shadow"></i>
+                                </a>
+                            </cms:show_repeatable>
+                        </cms:pages>
+                    </div>
                 </div>
             </div>
         </div>
