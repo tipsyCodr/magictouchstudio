@@ -141,6 +141,36 @@
 .testimonial-card, .testimonial-card p, .testimonial-card span, .testimonial-card div {
     color: #ffffff !important;
 }
+
+/* Mobile Navbar Toggle Button & Menu Fix */
+@media (max-width: 767px) {
+    #mobile-menu-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+        cursor: pointer !important;
+        z-index: 100 !important;
+    }
+    #mobile-menu-btn i {
+        font-size: 20px !important;
+        color: #ffffff !important;
+        display: block !important;
+    }
+    .desktop-nav-menu, .desktop-cta-btn {
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    #mobile-menu-btn, #mobile-menu {
+        display: none !important;
+    }
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
 	integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
